@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aethera Design · Spaces for Healing and Wellness</title>
+<meta name="description" content="Boho Brutalism. Minimalist spaces for healing and wellness: raw textures, soft linen and calm, earthy rooms.">
+<meta property="og:title" content="Aethera Design · Spaces for Healing and Wellness">
+<meta property="og:description" content="Boho Brutalism. Minimalist spaces for healing and wellness: raw textures, soft linen and calm, earthy rooms.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="living.jpg">
+<meta name="theme-color" content="#a79b93">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preload" href="tenor-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="jost-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
+<script>
+  /* play the intro once per visit, never for reduced motion */
+  try{
+    if(sessionStorage.getItem('aethera-intro') || matchMedia('(prefers-reduced-motion: reduce)').matches){
+      document.documentElement.classList.add('no-intro');
+    }
+  }catch(e){}
+</script>
+<style>
+  #splash{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:#e4e4e4;transition:opacity 1.2s ease,visibility 1.2s}
+  #splash.done{opacity:0;visibility:hidden;pointer-events:none}
+  #splash .mark{width:min(80vw,660px);height:auto;opacity:0;filter:blur(8px);clip-path:inset(0 100% 0 0);
+    animation:wipe 2.4s cubic-bezier(.55,0,.2,1) .5s forwards}
+  @keyframes wipe{0%{opacity:0;filter:blur(8px);clip-path:inset(0 100% 0 0)}
+                  35%{opacity:1}
+                  100%{opacity:1;filter:blur(0);clip-path:inset(0 0 0 0)}}
+  .skip{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);background:none;border:0;color:#666;font:inherit;font-size:11px;letter-spacing:.28em;text-transform:uppercase;cursor:pointer;padding:8px 14px}
+  .skip:hover{color:#2a2a2a}
+  #site{opacity:0;transform:translateY(14px);transition:opacity 1.2s ease .15s, transform 1.2s ease .15s}
+  body.ready #site,.no-intro #site{opacity:1;transform:none}
+  .no-intro #splash{display:none}
+  body.intro{overflow:hidden}
+  .no-intro body.intro{overflow:auto}
+</style>
+<noscript><style>#splash{display:none}#site{opacity:1;transform:none}</style></noscript>
+</head>
+<body class="intro">
+
+<div id="splash" aria-hidden="true">
+  <img class="mark" src="wordmark.png" alt="">
+  <button class="skip" type="button">Skip</button>
+</div>
+
+<div id="site">
+
+<div class="top"><a href="https://www.pinterest.com/aetheradesignmx/" target="_blank" rel="noopener">Pinterest</a></div>
+
+<header class="masthead">
+  <a class="emblem" href="index.html" aria-label="Aethera Design, home">
+    <img src="wordmark.png" alt="Aethera Design" width="1014" height="396">
+  </a>
+  <p class="slogan"><span>Boho Brutalism</span> <i>&middot;</i> <span>Wabi-Sabi</span> <i>&middot;</i> <span>Spaces for Healing and Wellness</span> <i>&middot;</i> <span>Holistic Living</span></p>
+</header>
+
+<nav aria-label="Main">
+  <ul><li><a href="interior.html">Interior Design</a></li><li><a href="art.html">Art</a></li><li><a href="healing-spaces.html">Healing Spaces</a></li><li><a href="rituals.html">Rituals</a></li><li><a href="about.html">About</a></li></ul>
+</nav>
+
+<main>
+  <section class="hero" aria-label="Spaces slideshow" id="hero">
+    <div class="track" id="track"><div class="slide"><img src="a1.jpg" alt="" decoding="async"></div><div class="slide"><img src="b1.jpg" alt="" decoding="async"></div><div class="slide"><img src="c1.jpg" alt="" decoding="async"></div><div class="slide"><img src="a2.jpg" alt="" loading="lazy" decoding="async"></div><div class="slide"><img src="b2.jpg" alt="" loading="lazy" decoding="async"></div><div class="slide"><img src="c2.jpg" alt="" loading="lazy" decoding="async"></div><div class="slide"><img src="a3.jpg" alt="" loading="lazy" decoding="async"></div><div class="slide"><img src="b3.jpg" alt="" loading="lazy" decoding="async"></div><div class="slide"><img src="c3.jpg" alt="" loading="lazy" decoding="async"></div><div class="slide"><img src="a4.jpg" alt="" loading="lazy" decoding="async"></div><div class="slide"><img src="b4.jpg" alt="" loading="lazy" decoding="async"></div><div class="slide"><img src="c4.jpg" alt="" loading="lazy" decoding="async"></div></div><button class="arrow prev" type="button" aria-label="Previous">&larr;</button><button class="arrow next" type="button" aria-label="Next">&rarr;</button>
+  </section>
+
+  <div class="wrap blog">
+    <section aria-labelledby="latest-title">
+      <div class="section-head">
+        <h2 id="latest-title">Latest Entries</h2>
+        <span>Interior Design · Art · Healing Spaces · Rituals</span>
+      </div>
+      <div class="posts"><a class="pcard" href="boho-brutalist-living-room-stone-wall-forest-view.html">
+  <div class="fig"><img src="living.jpg" alt="Living room with a sculpted rock wall, rattan pendant and forest view" loading="lazy" onerror="this.remove()"></div>
+  <span class="kicker">Interior Design</span>
+  <h3>Boho Brutalist Living Room: Stone Wall, Rattan Pendant and Forest View</h3>
+  <p>A sculpted rock wall, a low stone table and deep linen seating facing the forest.</p>
+  <span class="meta">Nov 17, 2026</span>
+</a><a class="pcard" href="wabi-sabi-wellness-oasis-sunken-jacuzzi.html">
+  <div class="fig"><img src="bath.jpg" alt="Circular stone jacuzzi facing a floor-to-ceiling window onto a misty pine forest" loading="lazy" onerror="this.remove()"></div>
+  <span class="kicker">Healing Spaces</span>
+  <h3>Wabi-Sabi Wellness Oasis: Sunken Jacuzzi with Forest View</h3>
+  <p>A circular stone tub facing floor-to-ceiling windows and a misty forest.</p>
+  <span class="meta">Nov 16, 2026</span>
+</a><a class="pcard" href="boho-brutalist-bedroom-raw-concrete-soft-linen.html">
+  <div class="fig"><img src="bedroom.jpg" alt="Bedroom with a raw concrete wall, white linen curtains and a low wood platform bed" loading="lazy" onerror="this.remove()"></div>
+  <span class="kicker">Interior Design</span>
+  <h3>Boho Brutalist Bedroom: Raw Concrete Wall and Soft Linen Curtains</h3>
+  <p>A board-formed concrete wall softened by billowing linen and a low platform bed.</p>
+  <span class="meta">Nov 14, 2026</span>
+</a><a class="pcard" href="wabi-sabi-meditation-room-sheer-curtains-plaster-light.html">
+  <div class="fig"><img src="meditation.jpg" alt="Sunlit room with curved plaster walls, sheer curtains and floor cushions" loading="lazy" onerror="this.remove()"></div>
+  <span class="kicker">Healing Spaces</span>
+  <h3>Wabi-Sabi Meditation Room: Sheer Curtains and Warm Plaster Light</h3>
+  <p>Curved plaster walls, floor cushions and golden light for slow mornings.</p>
+  <span class="meta">Nov 13, 2026</span>
+</a><a class="pcard" href="boho-brutalist-kitchen-plaster-hood-concrete-island.html">
+  <div class="fig"><img src="kitchen.jpg" alt="Kitchen with a sculpted plaster hood, concrete island and open oak shelves with ceramics" loading="lazy" onerror="this.remove()"></div>
+  <span class="kicker">Interior Design</span>
+  <h3>Boho Brutalist Kitchen: Plaster Hood, Concrete Island and Open Oak Shelves</h3>
+  <p>Sculpted plaster, a concrete island and shelves full of handmade ceramics.</p>
+  <span class="meta">Nov 12, 2026</span>
+</a><a class="pcard" href="imperfect-on-purpose-the-quiet-power-of-japanese-clay.html">
+  <div class="fig"><img src="clay.jpg" alt="Rough wood table with ceramic bowls and candles beside floor cushions" loading="lazy" onerror="this.remove()"></div>
+  <span class="kicker">Art</span>
+  <h3>Imperfect on Purpose: The Quiet Power of Japanese Clay</h3>
+  <p>Handmade bowls and vessels that keep the mark of the hand.</p>
+  <span class="meta">Nov 11, 2026</span>
+</a><a class="pcard" href="earthy-minimalist-interior-forest-view-sage-linen.html">
+  <div class="fig"><img src="forest.jpg" alt="Floor-to-ceiling window with sage linen curtains framing tall pine trees" loading="lazy" onerror="this.remove()"></div>
+  <span class="kicker">Interior Design</span>
+  <h3>Earthy Minimalist Interior: Forest View, Sage Linen Curtains and Concrete Floor</h3>
+  <p>Tall pines, sage linen and a polished concrete floor, with nature at the center.</p>
+  <span class="meta">Nov 10, 2026</span>
+</a><a class="pcard" href="sunken-lounge-nook-raw-stone-woven-wall-disc-candlelight.html">
+  <div class="fig"><img src="lounge.jpg" alt="Lounge nook with a raw stone wall, woven wall disc, linen cushions and candles" loading="lazy" onerror="this.remove()"></div>
+  <span class="kicker">Healing Spaces</span>
+  <h3>Sunken Lounge Nook: Raw Stone, Woven Wall Disc and Candlelight</h3>
+  <p>A cocooning corner of linen cushions, heavy drapes and candles along the stone edge.</p>
+  <span class="meta">Nov 9, 2026</span>
+</a><a class="pcard" href="boho-brutalist-home-office-weathered-plaster-wishbone-chair.html">
+  <div class="fig"><img src="office.jpg" alt="Home office nook with a weathered plaster wall, rustic desk, Wishbone chair and woven wall disc" loading="lazy" onerror="this.remove()"></div>
+  <span class="kicker">Interior Design</span>
+  <h3>Boho Brutalist Home Office: Weathered Plaster, Linen Drape and Wishbone Chair</h3>
+  <p>A workspace that feels calm and lived in, with a rustic desk and a woven wall disc.</p>
+  <span class="meta">Nov 8, 2026</span>
+</a><a class="pcard" href="minimalist-boho-bedroom-board-formed-concrete-linen-jute.html">
+  <div class="fig"><img src="bedroom2.jpg" alt="Bedroom with board-formed concrete walls, rumpled linen bedding and a glowing clay lamp" loading="lazy" onerror="this.remove()"></div>
+  <span class="kicker">Interior Design</span>
+  <h3>Minimalist Boho Bedroom: Board-Formed Concrete, Linen Bedding and Jute Rug</h3>
+  <p>Concrete walls and ceiling, rumpled linen and a clay lamp in warm greige tones.</p>
+  <span class="meta">Nov 7, 2026</span>
+</a></div>
+    </section>
+    <aside class="side" aria-label="Sidebar">
+  <div class="widget about-w">
+    <a class="emblem" href="about.html" style="display:block"><img src="wordmark.png" alt="Aethera Design"></a>
+    <h4>About</h4>
+    <p>Boho Brutalist interiors, Wabi-Sabi spaces and art, inspired by life in Tulum. You will find interior design, art, spaces made for rest, and holistic rituals that make a home feel like a retreat.</p>
+    <a class="more" href="about.html">More about Aethera</a>
+  </div>
+  <div class="widget">
+    <h4>Categories</h4>
+    <ul class="cats"><li><a href="interior.html"><span>Interior Design</span><span>6</span></a></li><li><a href="art.html"><span>Art</span><span>1</span></a></li><li><a href="healing-spaces.html"><span>Healing Spaces</span><span>3</span></a></li><li><a href="rituals.html"><span>Rituals</span><span>0</span></a></li></ul>
+  </div>
+  <div class="widget">
+    <h4>Newsletter</h4>
+    <p class="s">Subscribe to our newsletter.</p>
+    <form class="mini-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="newsletter">
+      <p style="display:none"><label>Do not fill this out <input name="bot-field"></label></p>
+      <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
+      <button type="submit">Join</button>
+    </form>
+  </div>
+  <div class="widget">
+    <h4>Follow</h4>
+    <p class="s">New rooms and ideas on <a href="https://www.pinterest.com/aetheradesignmx/" target="_blank" rel="noopener" style="border-bottom:1px solid var(--ink)">Pinterest</a>.</p>
+  </div>
+</aside>
+  </div>
+</main>
+
+<section class="news" id="letter" aria-labelledby="news-title">
+  <div class="wrap">
+    <h2 id="news-title">Receive our Aethera Design Newsletter</h2>
+    <p class="t">Subscribe to our newsletter.</p>
+    <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="newsletter">
+      <p style="display:none"><label>Do not fill this out <input name="bot-field"></label></p>
+      <input type="email" name="email" placeholder="Your email address" required aria-label="Email address">
+      <button type="submit">Subscribe</button>
+    </form>
+    
+  </div>
+</section>
+<footer class="wrap">
+  <div class="foot-top">
+    <div class="brand"><img src="wordmark.png" alt="Aethera Design"></div>
+    <div class="foot-links">
+      <a href="https://www.pinterest.com/aetheradesignmx/" target="_blank" rel="noopener">Pinterest</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+  <p class="disclosure">© 2026 Aethera Design</p>
+</footer>
+
+</div>
+
+<script>
+  (function(){
+    var root = document.documentElement, body = document.body, splash = document.getElementById('splash');
+    function finish(){
+      try{ sessionStorage.setItem('aethera-intro','1'); }catch(e){}
+      splash.classList.add('done');
+      body.classList.add('ready');
+      body.classList.remove('intro');
+      setTimeout(function(){ splash.style.display = 'none'; }, 1300);
+    }
+    if(root.classList.contains('no-intro')){ body.classList.remove('intro'); body.classList.add('ready'); return; }
+    var timer = setTimeout(finish, 4200);
+    function skip(){ clearTimeout(timer); finish(); }
+    splash.querySelector('.skip').addEventListener('click', skip);
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') skip(); });
+  })();
+</script>
+</body>
+</html>
