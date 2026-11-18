@@ -43,7 +43,7 @@
   }
 
   /* ---- reveal on scroll ---- */
-  var sel = '.pcard,.side .widget,.section-head,.cat-head > *,.post .head > *,.post-fig,.prose p,.look h2,.look li,.about-page > *,.news .wrap > *,.empty,.foot-top,.disclosure';
+  var sel = '.pcard,.side .widget,.section-head,.cat-head > *,.post .head > *,.post-fig,.prose p,.look h2,.look li,.about-page > *,.news .wrap > *,.empty,.foot-top';
   var els = [].slice.call(document.querySelectorAll(sel));
   if (reduce || !('IntersectionObserver' in window)) {
     els.forEach(function(e){ e.classList.add('rv','in'); });

@@ -134,7 +134,9 @@ a:hover .fig img{transform:scale(1.04)}
 
 /* footer */
 footer{padding:58px 0 42px;font-size:13px;color:var(--umber)}
-.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;padding-bottom:30px;border-bottom:1px solid var(--line);align-items:center}
+.foot-top{margin-top:56px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding-bottom:10px}
+footer .disclosure{margin:0;padding:0;max-width:none;font-size:12px;letter-spacing:.12em;color:var(--umber)}
+.foot-top .foot-links{margin-top:10px;justify-content:center}
 .foot-top .brand{display:flex;align-items:center;gap:16px;font-family:var(--head);font-size:18px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink)}
 .foot-top .brand img{width:190px;height:auto;object-fit:contain}
 .foot-links{display:flex;gap:28px;flex-wrap:wrap;font-family:var(--head);letter-spacing:.22em;text-transform:uppercase;font-size:11px;align-items:center}
