@@ -78,7 +78,7 @@ a:hover .fig img{transform:scale(1.04)}
 .about-w{text-align:center}
 .about-w .emblem{width:210px;margin:0 auto 24px}
 .about-w .emblem img{height:auto;object-fit:contain}
-.about-w p{font-size:15px;color:#4a4440;text-align:left}
+.about-w p{font-size:15px;color:#4a4440;text-align:justify;text-justify:inter-word;hyphens:manual}
 .about-w .more{margin-top:16px}
 .cats{list-style:none;border-top:1px solid var(--line)}
 .cats li a{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line);font-family:var(--head);font-size:12px;letter-spacing:.22em;text-transform:uppercase}
