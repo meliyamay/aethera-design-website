@@ -37,13 +37,13 @@
     if (b2) b2.addEventListener('click', function(){ next(); start(); });
     hero.addEventListener('mouseenter', stop);
     hero.addEventListener('mouseleave', start);
-    var t0 = 0; /* wait until the intro is over on the home page */
+    var t0 = 0; 
     setTimeout(start, 600);
     window.aetheraHero = { next: next, prev: prev };
   }
 
   /* ---- reveal on scroll ---- */
-  var sel = '.pcard,.side .widget,.section-head,.cat-head > *,.post .head > *,.post-fig,.prose p,.look h2,.look li,.about-page > *,.news .wrap > *,.empty,.foot-top';
+  var sel = '.pcard,.side .widget,.section-head,.cat-head > *,.prose p,.look h2,.look li,.about-page > *,.news .wrap > *,.empty,.foot-top';
   var els = [].slice.call(document.querySelectorAll(sel));
   if (reduce || !('IntersectionObserver' in window)) {
     els.forEach(function(e){ e.classList.add('rv','in'); });
@@ -52,7 +52,7 @@
     els.forEach(function(e){
       var p = e.parentNode, n = seen.get(p) || 0; seen.set(p, n + 1);
       e.classList.add('rv');
-      e.style.transitionDelay = Math.min(n, 5) * 90 + 'ms';
+      e.style.transitionDelay = Math.min(n, 3) * 40 + 'ms';
     });
     var io = new IntersectionObserver(function(list){
       list.forEach(function(en){

@@ -17,38 +17,11 @@
 <script>document.documentElement.classList.add('js')</script>
 <link rel="stylesheet" href="style.css">
 <script src="site.js" defer></script>
-<script>
-  /* play the intro once per visit, never for reduced motion */
-  try{
-    if(sessionStorage.getItem('aethera-intro') || matchMedia('(prefers-reduced-motion: reduce)').matches){
-      document.documentElement.classList.add('no-intro');
-    }
-  }catch(e){}
-</script>
 <style>
-  #splash{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:#e4e4e4;transition:opacity 1.2s ease,visibility 1.2s}
-  #splash.done{opacity:0;visibility:hidden;pointer-events:none}
-  #splash .mark{width:min(80vw,660px);height:auto;opacity:0;filter:blur(8px);clip-path:inset(0 100% 0 0);
-    animation:wipe 2.4s cubic-bezier(.55,0,.2,1) .5s forwards}
-  @keyframes wipe{0%{opacity:0;filter:blur(8px);clip-path:inset(0 100% 0 0)}
-                  35%{opacity:1}
-                  100%{opacity:1;filter:blur(0);clip-path:inset(0 0 0 0)}}
-  .skip{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);background:none;border:0;color:#666;font:inherit;font-size:11px;letter-spacing:.28em;text-transform:uppercase;cursor:pointer;padding:8px 14px}
-  .skip:hover{color:#2a2a2a}
-  #site{opacity:0;transform:translateY(14px);transition:opacity 1.2s ease .15s, transform 1.2s ease .15s}
-  body.ready #site,.no-intro #site{opacity:1;transform:none}
-  .no-intro #splash{display:none}
-  body.intro{overflow:hidden}
-  .no-intro body.intro{overflow:auto}
+  #site{animation:pagein .5s ease both}
 </style>
-<noscript><style>#splash{display:none}#site{opacity:1;transform:none}</style></noscript>
 </head>
-<body class="intro">
-
-<div id="splash" aria-hidden="true">
-  <img class="mark" src="wordmark.png" alt="">
-  <button class="skip" type="button">Skip</button>
-</div>
+<body>
 
 <div id="site">
 
@@ -207,22 +180,5 @@
 
 </div>
 
-<script>
-  (function(){
-    var root = document.documentElement, body = document.body, splash = document.getElementById('splash');
-    function finish(){
-      try{ sessionStorage.setItem('aethera-intro','1'); }catch(e){}
-      splash.classList.add('done');
-      body.classList.add('ready');
-      body.classList.remove('intro');
-      setTimeout(function(){ splash.style.display = 'none'; }, 1300);
-    }
-    if(root.classList.contains('no-intro')){ body.classList.remove('intro'); body.classList.add('ready'); return; }
-    var timer = setTimeout(finish, 4200);
-    function skip(){ clearTimeout(timer); finish(); }
-    splash.querySelector('.skip').addEventListener('click', skip);
-    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') skip(); });
-  })();
-</script>
 </body>
 </html>
